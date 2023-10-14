@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import  'react-toastify/dist/ReactToastify.css';
+ 
 const RegisterInstitute = React.lazy(() => import("pages/RegisterInstitute"));
 const IssuedCertificate = React.lazy(() => import("pages/IssuedCertificate"));
 const IssueCertificate = React.lazy(() => import("pages/IssueCertificate"));
