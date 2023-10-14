@@ -1,0 +1,172 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_instituteName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_instituteWallet",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_instituteCourse",
+						"type": "string"
+					}
+				],
+				"name": "addInstitute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_issuerId",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_issuerName",
+						"type": "string"
+					}
+				],
+				"name": "addIssuer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "idToIssuerName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfInstitutes",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "instituteName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "instituteWallet",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "instituteCourse",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfIssuers",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "issuerId",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "issuerName",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DeCertify.sol": "DeCertify"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"DeCertify.sol": {
+			"keccak256": "0xdf1b815c8b34a56bc5686fdaeaf1534fe4629ae708f91cf802f0c9639c167e00",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb5176d9920edc5195257230f9f7a6b0cf568ccdae90c9dd4e319792a8e2751c",
+				"dweb:/ipfs/QmWReNaE1SQManuJ4PAy1zaPywNrb6so1nKwoupWvyepRC"
+			]
+		}
+	},
+	"version": 1
+}
