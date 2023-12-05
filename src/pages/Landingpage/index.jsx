@@ -1,11 +1,29 @@
 import React from "react";
-
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Text } from "components";
 
 const LandingpagePage = () => {
   const navigate = useNavigate();
+
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [defaultBalance, setDefaultAccount] = useState(null);
+
+  const ConnectWallet = () => {
+    if (window.ethereum) {
+      window.ethereum.request({ method: 'eth_requestAccounts' })
+        .then(result => {
+          accountChanged([result[0]])
+        })
+    } else {
+      setErrorMessage('Install Metamask')
+    }
+  }
+
+  const accountChanged = (accountName) => {
+    setDefaultAccount(accountName)
+  }
 
   return (
     <>
@@ -94,15 +112,8 @@ const LandingpagePage = () => {
             />
             <Button
               className="cursor-pointer flex inset-x-[0] items-center justify-center min-w-[318px] mx-auto top-[7%]"
-              rightIcon={
-                <div className="h-[46px] ml-2.5 w-[46px] bg-deep_purple-A100 left-[2%] absolute p-[11px] rounded-[50%] flex justify-center items-center">
-                  <Img
-                    className="h-6 absolute"
-                    src="images/img_arrowright.svg"
-                    alt="arrow_right"
-                  />
-                </div>
-              }
+              onClick={ConnectWallet}
+
               shape="round"
               color="purple_A700"
               size="sm"
